@@ -7,7 +7,7 @@ Neste projeto, coloco em prática o desenvolvimento em puro HTML, CSS e JS, aind
 Neste projeto, até o momento é o que mais utilizei JS. Os efeitos trazidos pelo Script dão um ar de autoridade, de um site bem desenvolvido e boa interatividade com o usuário.
 
 ## Atualizações
-Em breve, farei ajustes no cabeçalho e intro, que não estão muito aparentes e com o design um pouco antigo. 
+Section da Intro já ajustada e conteiners dos colaboradores atualizado. Proxima alteração será no botão de compra e desenvolver um carrinho, para gerar um pedido e enviar automaticamente para o WhatsApp da farmácia.
 
 ## Autor
 [Gabriel-Torres](https://github.com/gabTorres2003)
