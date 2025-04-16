@@ -7,7 +7,8 @@
   --cinza-medio: #e0e0e0;
   --cinza-escuro: #333333;
   --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --borda-radius: 8px;
+  --max-width: 1600px;
+  --padding-lateral: 5vw;
   --transicao: all 0.3s ease;
 }
 
@@ -209,9 +210,10 @@ nav h1 {
   text-align: center;
   padding: 4rem 5%;
   position: relative;
-  background: linear-gradient(135deg, rgba(6,11,255,0.1) 0%, rgba(255,255,255,1) 100%),
-              url('assets/img/fundo-farmacia.jpg') center/cover no-repeat;
-  background-blend-mode: multiply;
+  background: linear-gradient(180deg, rgba(6,11,255,0.7), rgba(255,255,255,0.7)),
+              url('assets/img/fundo-farmacia.avif') center/cover no-repeat;
+  background-blend-mode: lighten;
+  color: var(--cinza-escuro);
 }
 
 .intro::before {
@@ -221,32 +223,31 @@ nav h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('assets/img/fundo-intro.jpg') center/cover no-repeat;
-  opacity: 0.1;
-  z-index: -1;
+  background: rgba(255,255,255,0.5);
+  z-index: 0;
 }
 
 .intro:hover {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
-              url('assets/img/fundo-farmacia.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)),
+              url('assets/img/fundo-farmacia.avif') center/cover no-repeat;
 }
 
 .intro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #060bff;
-  text-shadow: 1px 1px 3px rgba(255, 255, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  font-size: 2.8rem;
+  font-weight: 800;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: inline-block;
+  color: var(--azul);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .intro p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 8px;
-  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .equipe {
@@ -450,7 +451,14 @@ footer a:hover {
   }
 
   .intro p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    backdrop-filter: blur(4px);
   }
 }
 
