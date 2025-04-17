@@ -1,44 +1,27 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('mouseenter', function () {
-    this.style.transform = 'translateY(-10px)';
-    this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
-  });
-
-  card.addEventListener('mouseleave', function () {
-    this.style.transform = 'translateY(0)';
-    this.style.boxShadow = 'var(--sombra)';
-  });
-});
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const carrossel = document.querySelector('.produtos-carrossel');
   const btnPrev = document.querySelector('.prev');
   const btnNext = document.querySelector('.next');
   const produtosGrid = document.querySelectorAll('.produtos-grid');
   let currentIndex = 0;
 
+  // Atualiza a posição do carrossel
   function updateCarrossel() {
-    const width = document.querySelector('.produto-card').offsetWidth;
-    const gap = 32; // 2rem em pixels
-    const scrollAmount = (width + gap) * 3; // Mover 3 produtos
-
+    const cardWidth = document.querySelector('.produto-card').offsetWidth;
+    const gap = 24; // 1.5rem em pixels
+    const scrollAmount = (cardWidth + gap) * 3; // Mover 3 produtos
+    
     carrossel.scrollTo({
       left: currentIndex * scrollAmount,
       behavior: 'smooth'
     });
-
-    // Desativar botões quando apropriado
+    
+    // Atualiza estado dos botões
     btnPrev.disabled = currentIndex === 0;
     btnNext.disabled = currentIndex >= produtosGrid.length - 1;
   }
 
+  // Event listeners para os botões
   btnNext.addEventListener('click', () => {
     if (currentIndex < produtosGrid.length - 1) {
       currentIndex++;
@@ -53,6 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Inicializar
+  // Esconde botões quando não há mais itens para navegar
+  function checkButtons() {
+    btnPrev.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+    btnNext.style.visibility = currentIndex >= produtosGrid.length - 1 ? 'hidden' : 'visible';
+  }
+
+  // Inicializa
   updateCarrossel();
+  checkButtons();
 });
