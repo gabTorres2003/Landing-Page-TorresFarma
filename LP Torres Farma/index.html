@@ -14,19 +14,41 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <h1>Drogaria Torres Farma</h1>
-                <div class="menu">
-                    <a href="#produtos">Promoções</a>
-                    <a href="#equipe">Equipe</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#fotos">Loja</a>
-                </div>
-            </nav>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo-titulo">
+          <img src="assets/img/logo-torres.jpg" alt="Logo Drogaria Torres Farma" class="logo">
+          <h1>Drogaria Torres Farma</h1>
         </div>
-    </header>
+        
+        <div class="menu-carrinho">
+          <div class="menu">
+            <a href="#produtos">Promoções</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#fotos">Loja</a>
+          </div>
+          
+          <div class="carrinho-container">
+            <button class="carrinho-btn" aria-label="Carrinho de compras">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="carrinho-quantidade">0</span>
+            </button>
+            <div class="carrinho-dropdown">
+              <div class="carrinho-items">
+                <p class="carrinho-vazio">Seu carrinho está vazio</p>
+              </div>
+              <div class="carrinho-total">
+                <p>Total: <span>R$ 0,00</span></p>
+                <button class="btn-finalizar">Finalizar Compra</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 
     <section class="intro">
         <h2>Bem-vindo à Drogaria Torres Farma</h2>
