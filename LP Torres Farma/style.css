@@ -211,11 +211,11 @@ body {
 header {
   background-color: #060bff;
   color: white;
-  padding: 1.2rem 5%;
+  padding: 0.8rem var(--padding-lateral);
   position: sticky;
   top: 0;
-  overflow: visible;
   z-index: 1000;
+  box-shadow: var(--sombra);
   /* Remove qualquer corte de conteúdo */
 }
 
@@ -223,8 +223,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 nav h1 {
@@ -235,6 +234,18 @@ nav h1 {
   line-height: 1.2;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: auto; /* Empurra para a esquerda */
+}
+
+.logo {
+  height: 50px; /* Ajuste conforme necessário */
+  width: auto;
 }
 
 .menu-toggle {
@@ -280,6 +291,12 @@ nav h1 {
 
 .menu a:hover::after {
   transform: scaleX(1);
+}
+
+.menu-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .section {
@@ -349,7 +366,6 @@ nav h1 {
 
 .card {
   padding: 1.5rem;
-  /* Aumento do padding interno */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: white;
@@ -371,7 +387,7 @@ nav h1 {
 .card img {
   width: 100%;
   height: 250px;
-  object-fit: contain; /* Mudado de 'cover' para 'contain' */
+  object-fit: contain;
   object-position: center;
   background-color: #f8f8f8;
   padding: 1rem;
@@ -483,6 +499,160 @@ footer a:hover {
   z-index: 2;
 }
 
+/* Estilos do Carrinho */
+.carrinho-container {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 2rem;
+}
+
+.carrinho-btn {
+  background: none;
+  border: none;
+  color: var(--branco);
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transicao);
+}
+
+.carrinho-btn:hover {
+  color: var(--vermelho);
+}
+
+.carrinho-quantidade {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--vermelho);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.carrinho-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+}
+
+.carrinho-container:hover .carrinho-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.carrinho-items {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.carrinho-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+.carrinho-item:last-child {
+  border-bottom: none;
+}
+
+.carrinho-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-right: 1rem;
+  border-radius: 5px;
+  background: var(--cinza-claro);
+  padding: 0.5rem;
+}
+
+.carrinho-item-info {
+  flex: 1;
+}
+
+.carrinho-item-nome {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--cinza-escuro);
+}
+
+.carrinho-item-preco {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--vermelho);
+}
+
+.carrinho-item-remover {
+  background: none;
+  border: none;
+  color: var(--cinza-escuro);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: color 0.2s;
+}
+
+.carrinho-item-remover:hover {
+  color: var(--vermelho);
+}
+
+.carrinho-total {
+  border-top: 1px solid var(--cinza-claro);
+  padding-top: 1rem;
+  text-align: right;
+}
+
+.carrinho-total p {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.carrinho-total span {
+  color: var(--vermelho);
+  font-size: 1.1rem;
+}
+
+.btn-finalizar {
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-finalizar:hover {
+  background-color: var(--azul-escuro);
+}
+
+.carrinho-vazio {
+  text-align: center;
+  color: var(--cinza-escuro);
+  padding: 1rem 0;
+}
+
 @media (max-width: 768px) {
 
   .produto-card {
@@ -508,8 +678,8 @@ footer a:hover {
 
   nav h1 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin-bottom: 10px;
+    text-align: left;
   }
 
   .menu-toggle {
@@ -517,6 +687,8 @@ footer a:hover {
   }
 
   .menu {
+    order: 2;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
@@ -553,10 +725,33 @@ footer a:hover {
     padding: 1rem 1.5rem;
     backdrop-filter: blur(4px);
   }
+
+  .carrinho-container {
+    order: 1;
+    position: absolute;
+    right: var(--padding-lateral);
+    top: 1rem;
+  }
+  
+  .logo {
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
   .equipe-grid {
     grid-template-columns: 1fr;
+  }
+
+  .logo-titulo h1 {
+    font-size: 1.3rem;
+  }
+  
+  .menu {
+    gap: 0.8rem;
+  }
+  
+  .menu a {
+    font-size: 0.9rem;
   }
 }
