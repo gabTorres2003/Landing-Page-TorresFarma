@@ -4,13 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Drogaria Torres Farma - Cuidando da sua saúde com qualidade e os melhores preços">
-    <title>Drogaria Torres Farma - Saúde e Bem-estar</title>
+    <meta name="description" content="Drogaria Torres Farma - Cuidando da sua saúde com qualidade, carinho e os melhores preços da região. Encontre medicamentos, produtos de higiene e bem-estar.">
+    <title>Drogaria Torres Farma - Saúde e Bem-estar Completo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="assets/img/torresb.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/img/torresb.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Drogaria Torres Farma",
+      "description": "Cuidando da sua saúde com qualidade, carinho e os melhores preços da região.",
+      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI",
+      "logo": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/logo-torres.jpg",
+      "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/loja3.jpg", // Ex: Imagem da fachada
+      "priceRange": "$$", // Indique uma faixa de preço, se desejar (ex: $, $$, $$$)
+      "telephone": "+55-XX-XXXXX-XXXX", // SEU TELEFONE AQUI
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "SEU_ENDERECO_RUA_NUMERO_AQUI",
+        "addressLocality": "SUA_CIDADE_AQUI",
+        "addressRegion": "SEU_ESTADO_AQUI", // Sigla do Estado, ex: RJ
+        "postalCode": "SEU_CEP_AQUI"
+      }
+      // Você pode adicionar "openingHoursSpecification" se tiver horários definidos
+    }
+    </script>
 </head>
 
 <body>
@@ -23,11 +45,15 @@
         </div>
         
         <div class="menu-carrinho">
+          <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
           <div class="menu">
             <a href="#produtos">Promoções</a>
             <a href="#equipe">Equipe</a>
             <a href="#sobre">Sobre</a>
             <a href="#fotos">Loja</a>
+            <a href="contato.html">Contato</a>
           </div>
           
           <div class="carrinho-container">
@@ -52,7 +78,7 @@
 
     <section class="intro">
         <h2>Bem-vindo à Drogaria Torres Farma</h2>
-        <p>Cuidando da sua saúde com qualidade, carinho e os melhores preços da região. Confira nossas promoções imperdíveis!</p>
+        <p>Cuidando da sua saúde com qualidade, carinho e os melhores preços da região. Confira nossas promoções imperdíveis e conte com nosso atendimento especializado!</p>
       </section>
 
     <main>
@@ -61,56 +87,300 @@
             <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
             <div class="produtos-carrossel">
               <div class="produtos-grid">
-                <!-- Produto 1 -->
                 <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Paracetamol 500mg",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio1.jpg",
+                    "description": "Paracetamol 500mg é um analgésico e antitérmico indicado para o alívio de dores de cabeça, dores musculares, cólicas menstruais, dores de dente e para reduzir a febre. Consulte um farmacêutico.",
+                    "sku": "PARAC500MG", // Exemplo de SKU (código do produto)
+                    "brand": { // Adicione a marca se souber
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Paracetamol"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "9.99",
+                      "availability": "https://schema.org/InStock", // Ou OutOfStock, PreOrder
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos", // Link para o produto na página
+                      "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
                   <div class="produto-img-container">
                     <span class="novo-tag">Novo</span>
-                    <img src="assets/img/remedio1.jpg" alt="Paracetamol 500mg" class="produto-img">
+                    <img src="assets/img/remedio1.jpg" alt="Caixa de Paracetamol 500mg" class="produto-img">
                   </div>
                   <div class="produto-info">
                     <h3>Paracetamol 500mg</h3>
-                    <p class="produto-descricao">Analgésico e antitérmico - Alivia dores e reduz febre</p>
+                    <p class="produto-descricao">Analgésico e antitérmico. Alivia dores de cabeça, musculares e reduz febre. Ideal para seu bem-estar diário.</p>
                     <p class="produto-preco">R$ 9,99</p>
                     <button class="btn-comprar">Comprar</button>
                   </div>
                 </article>
                 
-                <!-- Produto 2 -->
                 <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Vitamina C 1000mg - 30 comprimidos",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio2.jpg",
+                    "description": "Suplemento alimentar de Vitamina C em comprimidos efervescentes, que auxilia no funcionamento do sistema imune. Contém 30 comprimidos de 1000mg.",
+                    "sku": "VITC1000MG30",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca da Vitamina C"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "14.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
                   <div class="produto-img-container">
-                    <img src="assets/img/remedio2.jpg" alt="Vitamina C 1000mg" class="produto-img">
+                    <img src="assets/img/remedio2.jpg" alt="Embalagem de Vitamina C 1000mg com 30 comprimidos" class="produto-img">
                   </div>
                   <div class="produto-info">
                     <h3>Vitamina C 1000mg</h3>
-                    <p class="produto-descricao">Suplemento vitamínico - 30 comprimidos</p>
+                    <p class="produto-descricao">Suplemento vitamínico essencial para fortalecer seu sistema imunológico. Caixa com 30 comprimidos.</p>
                     <p class="produto-preco">R$ 14,90</p>
                     <button class="btn-comprar">Comprar</button>
                   </div>
                 </article>
                 
-                <!-- Produto 3 -->
                 <article class="produto-card">
+                   <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Loratadina 10mg",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio3.jpg",
+                    "description": "Loratadina 10mg é um antialérgico indicado para o alívio dos sintomas associados com rinite alérgica, como: coceira nasal, coriza, espirros, ardor e coceira nos olhos.",
+                    "sku": "LORA10MG",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca da Loratadina"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "12.50",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
                   <div class="produto-img-container">
                     <span class="novo-tag">Novo</span>
-                    <img src="assets/img/remedio3.jpg" alt="Loratadina 10mg" class="produto-img">
+                    <img src="assets/img/remedio3.jpg" alt="Caixa de Loratadina 10mg, antialérgico" class="produto-img">
                   </div>
                   <div class="produto-info">
                     <h3>Loratadina 10mg</h3>
-                    <p class="produto-descricao">Antialérgico - Alivia sintomas de alergia</p>
+                    <p class="produto-descricao">Antialérgico eficaz para o alívio rápido dos sintomas de alergias respiratórias e da pele.</p>
                     <p class="produto-preco">R$ 12,50</p>
                     <button class="btn-comprar">Comprar</button>
                   </div>
                 </article>
                 
-                <!-- Produto 4 -->
                 <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Ibuprofeno 400mg - 10 comprimidos",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio4.png",
+                    "description": "Ibuprofeno 400mg é um anti-inflamatório, analgésico e antitérmico indicado para dores leves a moderadas e febre. Caixa com 10 comprimidos.",
+                    "sku": "IBUP400MG10",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Ibuprofeno"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "15.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
                   <div class="produto-img-container">
-                    <img src="assets/img/remedio4.png" alt="Ibuprofeno 400mg" class="produto-img">
+                    <img src="assets/img/remedio4.png" alt="Blister de Ibuprofeno 400mg com 10 comprimidos" class="produto-img">
                   </div>
                   <div class="produto-info">
                     <h3>Ibuprofeno 400mg</h3>
-                    <p class="produto-descricao">Anti-inflamatório - 10 comprimidos</p>
+                    <p class="produto-descricao">Anti-inflamatório indicado para alívio de dores e inflamações. Embalagem com 10 comprimidos.</p>
                     <p class="produto-preco">R$ 15,90</p>
+                    <button class="btn-comprar">Comprar</button>
+                  </div>
+                </article>
+
+                <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Xarope de Guaco 150mL",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio5.png",
+                    "description": "Ibuprofeno 400mg é um anti-inflamatório, analgésico e antitérmico indicado para dores leves a moderadas e febre. Caixa com 10 comprimidos.",
+                    "sku": "IBUP400MG10",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Ibuprofeno"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "15.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
+                  <div class="produto-img-container">
+                    <img src="assets/img/remedio5.png" alt="Xarope de Guaco 150mL" class="produto-img">
+                  </div>
+                  <div class="produto-info">
+                    <h3>Xarope de Guaco 150mL - Expectorante NaturalL</h3>
+                    <p class="produto-descricao">Alívio natural da tosse produtiva.</p>
+                    <p class="produto-preco">R$ 22,90</p>
+                    <button class="btn-comprar">Comprar</button>
+                  </div>
+                </article>
+
+                <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Dipirona Sódica Gotas 20mL - Alívio Rápido",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio4.png",
+                    "description": "Ibuprofeno 400mg é um anti-inflamatório, analgésico e antitérmico indicado para dores leves a moderadas e febre. Caixa com 10 comprimidos.",
+                    "sku": "IBUP400MG10",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Ibuprofeno"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "15.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
+                  <div class="produto-img-container">
+                    <img src="assets/img/remedio6.png" alt="Dipirona Sódica Gotas 20mL - Alívio Rápido" class="produto-img">
+                  </div>
+                  <div class="produto-info">
+                    <h3>Dipirona Sódica Gotas 20mL</h3>
+                    <p class="produto-descricao">Analgésico e antitérmico eficaz contra dores e febre.</p>
+                    <p class="produto-preco">R$ 8,50</p>
+                    <button class="btn-comprar">Comprar</button>
+                  </div>
+                </article>
+
+                <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Hidróxido de Alumínio + Hidróxido de Magnésio (Suspensão Oral) 240mL",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio4.png",
+                    "description": "Ibuprofeno 400mg é um anti-inflamatório, analgésico e antitérmico indicado para dores leves a moderadas e febre. Caixa com 10 comprimidos.",
+                    "sku": "IBUP400MG10",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Ibuprofeno"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "15.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
+                  <div class="produto-img-container">
+                    <img src="assets/img/remedio7.png" alt="Hidróxido de Alumínio + Hidróxido de Magnésio (Suspensão Oral) 240mL" class="produto-img">
+                  </div>
+                  <div class="produto-info">
+                    <h3>Antiácido Suspensão Oral 240mL - Alívio Imediato da Azia</h3>
+                    <p class="produto-descricao">Combate a azia, queimação e má digestão de forma rápida e eficaz.</p>
+                    <p class="produto-preco">R$ 18,75</p>
+                    <button class="btn-comprar">Comprar</button>
+                  </div>
+                </article>
+
+                <article class="produto-card">
+                  <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Cloreto de Sódio 0,9% (Solução Nasal Spray) 50mL",
+                    "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/remedio4.png",
+                    "description": "Ibuprofeno 400mg é um anti-inflamatório, analgésico e antitérmico indicado para dores leves a moderadas e febre. Caixa com 10 comprimidos.",
+                    "sku": "IBUP400MG10",
+                     "brand": {
+                      "@type": "Brand",
+                      "name": "Nome da Marca do Ibuprofeno"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "priceCurrency": "BRL",
+                      "price": "15.90",
+                      "availability": "https://schema.org/InStock",
+                      "url": "SUA_URL_COMPLETA_DO_SITE_AQUI#produtos",
+                       "seller": {
+                        "@type": "Organization",
+                        "name": "Drogaria Torres Farma"
+                      }
+                    }
+                  }
+                  </script>
+                  <div class="produto-img-container">
+                    <img src="assets/img/remedio8.png" alt="Cloreto de Sódio 0,9% (Solução Nasal Spray) 50mL" class="produto-img">
+                  </div>
+                  <div class="produto-info">
+                    <h3>Solução Nasal Spray 50mL - Descongestionante Suave</h3>
+                    <p class="produto-descricao">Limpeza e umidificação nasal para alívio da congestão.</p>
+                    <p class="produto-preco">R$ 15,99</p>
                     <button class="btn-comprar">Comprar</button>
                   </div>
                 </article>
@@ -124,53 +394,52 @@
                 <h2 id="titulo-equipe">Nossa Equipe</h2>
                 <div class="equipe-grid">
                     <article class="card">
-                        <img src="assets/img/sam.jpg" alt="Samantha, farmacêutica sorrindo">
+                        <img src="assets/img/sam.jpg" alt="Samantha, farmacêutica responsável pela Drogaria Torres Farma, sorrindo">
                         <h3>Samantha</h3>
-                        <p>Farmacêutica</p>
-                        <p class="bio">Dona e farmacêutica formada pela FMC</p>
+                        <p>Farmacêutica Responsável</p>
+                        <p class="bio">Dona e farmacêutica formada pela FMC, sempre pronta para te atender com um sorriso e a melhor orientação.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/ana.jpg" alt="Ana Clara, estoquista">
+                        <img src="assets/img/ana.jpg" alt="Ana Clara, nossa atenciosa estoquista">
                         <h3>Ana Clara</h3>
                         <p>Estoquista</p>
-                        <p class="bio">Estagiária recém contratada e caçulinha da Torres</p>
+                        <p class="bio">Estagiária recém contratada e caçulinha da Torres, garantindo que nossos produtos estejam sempre disponíveis.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/jo.jpg" alt="Jo, caixa">
+                        <img src="assets/img/jo.jpg" alt="Jojô, operadora de caixa experiente">
                         <h3>Jojô</h3>
                         <p>Caixa</p>
-                        <p class="bio">Caixa da Torres desde 2017</p>
+                        <p class="bio">Caixa da Torres desde 2017, agilidade e simpatia no seu atendimento.</p>
                     </article>
-                    <!-- Novos membros da equipe -->
                     <article class="card">
-                        <img src="assets/img/celio.jpg" alt="Célio, balconista">
+                        <img src="assets/img/celio.jpg" alt="Célio, balconista prestativo da Drogaria Torres Farma">
                         <h3>Célio</h3>
                         <p>Balconista</p>
-                        <p class="bio">Balconista da Torres desde 2024</p>
+                        <p class="bio">Balconista da Torres desde 2024, sempre disposto a ajudar a encontrar o que você precisa.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/aline.jpg" alt="Aline, balconista">
+                        <img src="assets/img/aline.jpg" alt="Aline, balconista com amplo conhecimento dos produtos">
                         <h3>Aline</h3>
                         <p>Balconista</p>
-                        <p class="bio">Balconista da Torres desde 2021</p>
+                        <p class="bio">Balconista da Torres desde 2021, conhece tudo sobre nossos produtos de perfumaria e higiene.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/junior.jpg" alt="Júnior, balconista">
+                        <img src="assets/img/junior.jpg" alt="Júnior, balconista dedicado ao seu bem-estar">
                         <h3>Júnior</h3>
                         <p>Balconista</p>
-                        <p class="bio">Balconista da Torres desde 2024</p>
+                        <p class="bio">Balconista da Torres desde 2024, focado em oferecer o melhor para sua saúde.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/paulo.jpg" alt="Paulo, balconista">
+                        <img src="assets/img/paulo.jpg" alt="Paulo, balconista experiente e atencioso">
                         <h3>Paulo</h3>
                         <p>Balconista</p>
-                        <p class="bio">Balconista da Torres desde 2022</p>
+                        <p class="bio">Balconista da Torres desde 2022, com vasta experiência para te orientar.</p>
                     </article>
                     <article class="card">
-                        <img src="assets/img/iza.jpg" alt="Iza, caixa">
+                        <img src="assets/img/iza.jpg" alt="Iza, operadora de caixa ágil e simpática">
                         <h3>Iza</h3>
                         <p>Caixa</p>
-                        <p class="bio">Caixa da Torres desde 2025</p>
+                        <p class="bio">Caixa da Torres desde 2023, garantindo um processo de compra rápido e eficiente.</p>
                     </article>
                 </div>
             </div>
@@ -179,9 +448,8 @@
         <section id="sobre" class="section sobre" aria-labelledby="titulo-sobre">
             <div class="container">
                 <h2 id="titulo-sobre">Sobre Nós</h2>
-                <p>Fundada em 2010, a Drogaria Torres Farma nasceu com o propósito de oferecer medicamentos de qualidade
-                    e atendimento humanizado. Com o passar dos anos, conquistamos a confiança da comunidade e seguimos
-                    em constante crescimento.</p>
+                <p>Fundada em 2010, a Drogaria Torres Farma nasceu com o propósito de oferecer medicamentos de qualidade, atendimento humanizado e os melhores preços da cidade. Com o passar dos anos, conquistamos a confiança da comunidade e seguimos em constante crescimento, sempre buscando inovar e ampliar nossa gama de produtos e serviços para cuidar cada vez melhor da sua saúde e bem-estar.</p>
+                <p>Nossa missão é ser sua parceira de confiança em saúde, oferecendo não apenas medicamentos, mas também orientação farmacêutica qualificada, produtos de higiene, perfumaria e cuidados pessoais. Visite-nos e sinta a diferença de um atendimento que realmente se importa com você!</p>
             </div>
         </section>
 
@@ -190,15 +458,15 @@
                 <h2 id="titulo-fotos">Nossa Loja</h2>
                 <div class="fotos-grid">
                     <figure class="card">
-                        <img src="assets/img/loja1.png" alt="Interior da loja com prateleiras de medicamentos">
-                        <figcaption>Área de medicamentos</figcaption>
+                        <img src="assets/img/loja1.png" alt="Amplo interior da Drogaria Torres Farma com prateleiras organizadas de medicamentos e produtos de saúde">
+                        <figcaption>Área de medicamentos e dermocosméticos</figcaption>
                     </figure>
                     <figure class="card">
-                        <img src="assets/img/loja2.png" alt="Balcão de atendimento da farmácia">
-                        <figcaption>Balcão de atendimento</figcaption>
+                        <img src="assets/img/loja2.png" alt="Balcão de atendimento da Drogaria Torres Farma com farmacêuticos prontos para ajudar">
+                        <figcaption>Balcão de atendimento farmacêutico</figcaption>
                     </figure>
                     <figure class="card">
-                        <img src="assets/img/loja3.jpg" alt="Fachada da Drogaria Torres Farma">
+                        <img src="assets/img/loja3.jpg" alt="Fachada moderna e acolhedora da Drogaria Torres Farma">
                         <figcaption>Nossa fachada</figcaption>
                     </figure>
                 </div>
@@ -207,22 +475,32 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Drogaria Torres Farma. Todos os direitos reservados.</p>
+    <div class="container">
+        <div class="footer-info">
+            <p><strong>Drogaria Torres Farma</strong></p>
+            <p>Rua Dr. Beda, 652 - Parque Aurora, Campos dos Goytacazes - RJ, 28026-592</p>
+            <p>Telefone: (22)2726-4892 | WhatsApp: (22)99940-4155</p>
+            <p>Email: drogariatorresfarma@gmail.com</p>
+        </div>
+
+        <div class="footer-links-social"> 
             <nav aria-label="Navegação do rodapé">
-                <a href="#">Termos de Uso</a>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Contato</a>
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+                <a href="contato.html">Contato</a>
             </nav>
             <div class="social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="SUA_URL_FACEBOOK_AQUI" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                <a href="SUA_URL_INSTAGRAM_AQUI" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="SUA_URL_WHATSAPP_AQUI" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <p class="footer-copyright">&copy; 2025 Drogaria Torres Farma. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
