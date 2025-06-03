@@ -1,0 +1,4 @@
+[[redirects]]Add commentMore actions
+from = "/*"
+to = "/index.html"
+status = 200
