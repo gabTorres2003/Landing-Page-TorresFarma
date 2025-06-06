@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const carrosselContainer = document.querySelector(".produtos-container");
-  if (carrosselContainer) {
+  const todosCarrosselContainers = document.querySelectorAll(".produtos-container");
+
+  todosCarrosselContainers.forEach((carrosselContainer) => {
     const carrossel = carrosselContainer.querySelector(".produtos-carrossel");
     const btnPrev = carrosselContainer.querySelector(".carrossel-btn.prev");
     const btnNext = carrosselContainer.querySelector(".carrossel-btn.next");
@@ -17,21 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
       const originalCards = Array.from(produtosGrid.children);
       const numOriginalCards = originalCards.length;
 
-      originalCards
-        .slice()
-        .reverse()
-        .forEach((card) => {
-          const clone = card.cloneNode(true);
-          produtosGrid.insertBefore(clone, produtosGrid.firstChild);
-        });
-      originalCards.forEach((card) => {
-        const clone = card.cloneNode(true);
-        produtosGrid.appendChild(clone);
-      });
+      if (numOriginalCards === 0) return;
+
+      const visibleCards = Math.floor(carrossel.clientWidth / (originalCards[0].offsetWidth + 24));
+      if (numOriginalCards > visibleCards) {
+          originalCards.slice().reverse().forEach((card) => {
+              const clone = card.cloneNode(true);
+              produtosGrid.insertBefore(clone, produtosGrid.firstChild);
+          });
+          originalCards.forEach((card) => {
+              const clone = card.cloneNode(true);
+              produtosGrid.appendChild(clone);
+          });
+      }
 
       let cardWidth = originalCards[0].offsetWidth;
       let gap = parseFloat(getComputedStyle(produtosGrid).gap) || 24;
-      let currentIndex = numOriginalCards;
+      let currentIndex = numOriginalCards > visibleCards ? numOriginalCards : 0;
       let isTransitioning = false;
 
       function calculateDimensions() {
@@ -52,8 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
           carrossel.style.scrollBehavior = "smooth";
         });
       }
-
-      setInitialPosition();
+      
+      if (numOriginalCards > visibleCards) {
+          setInitialPosition();
+      }
 
       function moveTo(newIndexDirection) {
         if (isTransitioning) return;
@@ -101,14 +106,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       updateButtonVisibility();
       window.addEventListener("resize", () => {
-        setInitialPosition();
-        updateButtonVisibility();
+          if (numOriginalCards > visibleCards) {
+              setInitialPosition();
+          }
+          updateButtonVisibility();
       });
     } else {
       if (btnPrev) btnPrev.style.display = "none";
       if (btnNext) btnNext.style.display = "none";
     }
-  }
+  });
 
   const carrinhoBtn = document.querySelector(".carrinho-btn");
   const carrinhoDropdown = document.querySelector(".carrinho-dropdown");
@@ -151,30 +158,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.className = "carrinho-item";
         itemElement.innerHTML = `
-                    <img src="${item.imagem}" alt="${item.nome}">
-                    <div class="carrinho-item-info">
-                        <p class="carrinho-item-nome">${item.nome}</p>
-                        <p class="carrinho-item-preco">R$ ${item.preco.toFixed(
-                          2
-                        )}</p>
-                        <div class="carrinho-item-controls">
-                            <button class="carrinho-item-diminuir" data-index="${index}" aria-label="Diminuir quantidade de ${
-          item.nome
-        }">-</button>
-                            <span class="carrinho-item-quantidade">Qtd: ${
-                              item.quantidade
-                            }</span>
-                            <button class="carrinho-item-aumentar" data-index="${index}" aria-label="Aumentar quantidade de ${
-          item.nome
-        }">+</button>
-                        </div>
-                    </div>
-                    <button class="carrinho-item-remover-total" data-index="${index}" aria-label="Remover ${
-          item.nome
-        } do carrinho">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                `;
+            <img src="${item.imagem}" alt="${item.nome}">
+            <div class="carrinho-item-info">
+                <p class="carrinho-item-nome">${item.nome}</p>
+                <p class="carrinho-item-preco">R$ ${item.preco.toFixed(2)}</p>
+                <div class="carrinho-item-controls">
+                    <button class="carrinho-item-diminuir" data-index="${index}" aria-label="Diminuir quantidade de ${item.nome}">-</button>
+                    <span class="carrinho-item-quantidade">Qtd: ${item.quantidade}</span>
+                    <button class="carrinho-item-aumentar" data-index="${index}" aria-label="Aumentar quantidade de ${item.nome}">+</button>
+                </div>
+            </div>
+            <button class="carrinho-item-remover-total" data-index="${index}" aria-label="Remover ${item.nome} do carrinho">
+                <i class="fas fa-trash-alt"></i>
+            </button>`;
         carrinhoItemsContainer.appendChild(itemElement);
         subTotalPedido += item.preco * item.quantidade;
       });
@@ -284,35 +280,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
+  
   if (btnFinalizarCompra) {
     btnFinalizarCompra.addEventListener("click", function () {
       if (carrinho.length === 0) {
         alert("Seu carrinho está vazio!");
         return;
       }
-
+      
       let subTotalPedido = 0;
       const itensParaMensagem = carrinho
-        .map((item) => {
-          const totalItem = item.preco * item.quantidade;
-          subTotalPedido += totalItem;
-          return `${item.quantidade}x ${item.nome} (R$ ${item.preco.toFixed(
+      .map((item) => {
+        const totalItem = item.preco * item.quantidade;
+        subTotalPedido += totalItem;
+        return `${item.quantidade}x ${item.nome} (R$ ${item.preco.toFixed(
             2
           )} cada) - Total Item: R$ ${totalItem.toFixed(2)}`;
         })
         .join("\n");
-
+        
       const mensagemWhatsapp =
-        "Olá, Drogaria Torres Farma! Gostaria de fazer o seguinte pedido:\n" +
+      "Olá, Drogaria Torres Farma! Gostaria de fazer o seguinte pedido:\n" +
         itensParaMensagem +
         `\n\nTOTAL DO PEDIDO: R$ ${subTotalPedido.toFixed(2)}`;
+        
+        const numeroFarmacia = "5522999404155";
 
-      const numeroFarmacia = "5522999404155";
-
-      if (numeroFarmacia.length < 10) {
-         alert("Número de WhatsApp da farmácia não configurado corretamente no script.js!");
-         return;
+        if (numeroFarmacia.length < 10 || isNaN(parseInt(numeroFarmacia))) {
+        alert("Número de WhatsApp da farmácia não configurado corretamente no script.js!");
+        return;
       }
       
       alert(
@@ -399,17 +395,20 @@ document.addEventListener("DOMContentLoaded", function () {
           
           const numeroFarmaciaContato = "5522999404155"; 
 
-          if (numeroFarmaciaContato.length < 10) {
+          if (numeroFarmaciaContato.length < 10 || isNaN(parseInt(numeroFarmaciaContato))) {
                alert("O número de WhatsApp para contato não está configurado corretamente. Por favor, avise ao administrador do site.");
                return;
           }
-
+          
           alert('Você será redirecionado para o WhatsApp para enviar sua mensagem. Após confirmar o envio no WhatsApp, se desejar, pode fechar esta aba.');
 
           const mensagemCodificada = encodeURIComponent(mensagemWhatsApp);
           const urlWhatsApp = `https://wa.me/${numeroFarmaciaContato}?text=${mensagemCodificada}`;
 
           window.open(urlWhatsApp, '_blank');
+
+          
+          formContato.reset();
       });
   }
 });
