@@ -25,23 +25,23 @@
     />
 
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Pharmacy",
-          "name": "Drogaria Torres Farma",
-          "description": "Cuidando da sua saúde com qualidade, carinho e os melhores preços da região.",
-          "url": "SUA_URL_COMPLETA_DO_SITE_AQUI",
-          "logo": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/logo-torres.jpg",
-          "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/loja3.jpg",
-          "priceRange": "$",
-          "telephone": "(22)99940-4155",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Rua Dr. Beda, 652",
-            "addressLocality": "Campos dos Goytacazes",
-            "addressRegion": "RJ",
-            "postalCode": "28026-592"
-          },
+      {
+        "@context": "https://schema.org",
+        "@type": "Pharmacy",
+        "name": "Drogaria Torres Farma",
+        "description": "Cuidando da sua saúde com qualidade, carinho e os melhores preços da região.",
+        "url": "SUA_URL_COMPLETA_DO_SITE_AQUI",
+        "logo": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/logo-torres.jpg",
+        "image": "SUA_URL_COMPLETA_DO_SITE_AQUI/assets/img/loja3.jpg",
+        "priceRange": "$",
+        "telephone": "(22)99940-4155",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Dr. Beda, 652",
+          "addressLocality": "Campos dos Goytacazes",
+          "addressRegion": "RJ",
+          "postalCode": "28026-592"
+        },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -85,10 +85,27 @@
               <i class="fas fa-bars"></i>
             </button>
             <div class="menu">
-              <a href="#produtos">Promoções</a>
-              <a href="#equipe">Equipe</a>
-              <a href="#sobre">Sobre</a>
-              <a href="#fotos">Loja</a>
+              <div class="dropdown">
+                <button class="dropdown-btn">
+                  Produtos <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="index.html#produtos">Produtos em Promoção</a>
+                  <a href="index.html#mais-vendidos">Mais Vendidos</a>
+                  <a href="index.html#novidades">Novidades</a>
+                  <a href="index.html#genericos">Genéricos</a>
+                  <a href="index.html#vitaminas-suplementos"
+                    >Vitaminas e Suplementos</a
+                  >
+                  <a href="index.html#mamae-bebe">Cuidados para Mamãe e Bebê</a>
+                  <a href="index.html#higiene-pessoal">Higiene Pessoal</a>
+                  <a href="index.html#saude-feminina">Saúde Feminina</a>
+                  <a href="index.html#primeiros-socorros">Primeiros Socorros</a>
+                </div>
+              </div>
+              <a href="index.html#equipe">Equipe</a>
+              <a href="index.html#sobre">Sobre</a>
+              <a href="index.html#fotos">Loja</a>
               <a href="contato.html">Contato</a>
             </div>
 
@@ -489,6 +506,1278 @@
         </button>
       </section>
 
+      <section id="mais-vendidos" class="produtos-container">
+        <h2>Mais Vendidos</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-dipirona.png"
+                  alt="Dipirona Sódica"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Dipirona Sódica 500mg</h3>
+                <p class="produto-descricao">
+                  Analgésico e antitérmico, um clássico contra dores e febre.
+                </p>
+                <p class="produto-preco">R$ 8,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-protetor-solar.png"
+                  alt="Protetor Solar FPS 50"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Protetor Solar FPS 50</h3>
+                <p class="produto-descricao">
+                  Alta proteção contra os raios UVA/UVB. Toque seco.
+                </p>
+                <p class="produto-preco">R$ 55,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-vitamina-c-1g.png"
+                  alt="Vitamina C 1g"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Vitamina C 1g</h3>
+                <p class="produto-descricao">
+                  Reforço para o sistema imunológico. Comprimidos efervescentes.
+                </p>
+                <p class="produto-preco">R$ 21,99</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-creme-dental-sensibilidade.png"
+                  alt="Creme Dental para Sensibilidade"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Creme Dental Sensibilidade</h3>
+                <p class="produto-descricao">
+                  Alívio e proteção diária para dentes sensíveis. 90g.
+                </p>
+                <p class="produto-preco">R$ 15,75</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-loratadina-10mg.png"
+                  alt="Loratadina 10mg"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Loratadina 10mg</h3>
+                <p class="produto-descricao">
+                  Antialérgico eficaz para alívio dos sintomas de rinite. 12
+                  comprimidos.
+                </p>
+                <p class="produto-preco">R$ 12,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-shampoo-anticaspa.png"
+                  alt="Shampoo Anticaspa"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Shampoo Anticaspa</h3>
+                <p class="produto-descricao">
+                  Limpeza profunda e controle da caspa desde a primeira lavagem.
+                </p>
+                <p class="produto-preco">R$ 32,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-neosoro.png"
+                  alt="Descongestionante Nasal"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Descongestionante Nasal</h3>
+                <p class="produto-descricao">
+                  Alívio rápido e eficaz da congestão nasal. Uso adulto.
+                </p>
+                <p class="produto-preco">R$ 9,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-dorflex.png"
+                  alt="Dorflex"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Dorflex</h3>
+                <p class="produto-descricao">
+                  Analgésico e relaxante muscular para dores de cabeça e
+                  musculares.
+                </p>
+                <p class="produto-preco">R$ 19,80</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="novidades" class="produtos-container">
+        <h2>Novidades</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-melatonina.png"
+                  alt="Melatonina em Gotas"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Melatonina em Gotas</h3>
+                <p class="produto-descricao">
+                  Auxilia na indução do sono de forma natural e rápida.
+                </p>
+                <p class="produto-preco">R$ 35,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-serum-facial.png"
+                  alt="Sérum Facial com Vitamina C"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sérum Facial com Vitamina C</h3>
+                <p class="produto-descricao">
+                  Ação antioxidante que ilumina e uniformiza o tom da pele.
+                </p>
+                <p class="produto-preco">R$ 89,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-colageno.png"
+                  alt="Colágeno Hidrolisado em Pó"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colágeno Hidrolisado em Pó</h3>
+                <p class="produto-descricao">
+                  Pele, cabelos e unhas mais fortes e saudáveis. Sabor neutro.
+                </p>
+                <p class="produto-preco">R$ 75,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-protetor-com-cor.png"
+                  alt="Protetor Solar com Cor"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Protetor Solar com Cor FPS 60</h3>
+                <p class="produto-descricao">
+                  Alta proteção e cobertura leve para o dia a dia.
+                </p>
+                <p class="produto-preco">R$ 68,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-sabonete-vegano.png"
+                  alt="Sabonete em Barra Vegano"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sabonete em Barra Vegano</h3>
+                <p class="produto-descricao">
+                  Limpeza suave com ingredientes naturais. Fragrância lavanda.
+                </p>
+                <p class="produto-preco">R$ 11,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-teste-covid.png"
+                  alt="Teste Rápido Covid-19"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Autoteste Rápido Covid-19</h3>
+                <p class="produto-descricao">
+                  Resultado rápido e confiável em 15 minutos. Aprovado pela
+                  ANVISA.
+                </p>
+                <p class="produto-preco">R$ 49,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-shampoo-barra.png"
+                  alt="Shampoo em Barra"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Shampoo Sólido em Barra</h3>
+                <p class="produto-descricao">
+                  Sustentável e prático. Para cabelos normais a oleosos.
+                </p>
+                <p class="produto-preco">R$ 38,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <span class="novo-tag">Novo</span>
+                <img
+                  src="assets/img/produto-vitamina-d-gotas.png"
+                  alt="Vitamina D em Gotas"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Vitamina D3 em Gotas</h3>
+                <p class="produto-descricao">
+                  Alta absorção para saúde óssea e imunidade. Sabor menta.
+                </p>
+                <p class="produto-preco">R$ 29,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="genericos" class="produtos-container">
+        <h2>Genéricos</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-paracetamol.png"
+                  alt="Paracetamol Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Paracetamol 750mg Genérico</h3>
+                <p class="produto-descricao">
+                  Eficaz contra dor e febre. Qualidade com economia.
+                </p>
+                <p class="produto-preco">R$ 6,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-ibuprofeno.png"
+                  alt="Ibuprofeno Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Ibuprofeno 600mg Genérico</h3>
+                <p class="produto-descricao">
+                  Anti-inflamatório para alívio de dores leves a moderadas.
+                </p>
+                <p class="produto-preco">R$ 11,80</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-dipirona.png"
+                  alt="Dipirona Sódica Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Dipirona Sódica Gotas Genérico</h3>
+                <p class="produto-descricao">
+                  Analgésico e antitérmico em gotas para um alívio rápido.
+                </p>
+                <p class="produto-preco">R$ 5,99</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-loratadina.png"
+                  alt="Loratadina Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Loratadina 10mg Genérico</h3>
+                <p class="produto-descricao">
+                  Antialérgico para o tratamento de rinite alérgica e urticária.
+                </p>
+                <p class="produto-preco">R$ 9,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-diclofenaco.png"
+                  alt="Diclofenaco Sódico Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Diclofenaco Sódico Genérico</h3>
+                <p class="produto-descricao">
+                  Indicado para o tratamento de dor, inflamação e febre.
+                </p>
+                <p class="produto-preco">R$ 10,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-simeticona.png"
+                  alt="Simeticona Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Simeticona Gotas Genérico</h3>
+                <p class="produto-descricao">
+                  Para o alívio do desconforto abdominal e gases. 15ml.
+                </p>
+                <p class="produto-preco">R$ 8,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-cetirizina.png"
+                  alt="Dicloridrato de Cetirizina"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Dicloridrato de Cetirizina</h3>
+                <p class="produto-descricao">
+                  Antialérgico para alívio rápido de alergias e coceiras.
+                </p>
+                <p class="produto-preco">R$ 14,20</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/generico-cloreto-sodio.png"
+                  alt="Cloreto de Sódio Genérico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Cloreto de Sódio 0,9%</h3>
+                <p class="produto-descricao">
+                  Solução nasal para limpeza e descongestão diária.
+                </p>
+                <p class="produto-preco">R$ 7,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="vitaminas-suplementos" class="produtos-container">
+        <h2>Vitaminas e Suplementos</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-vitamina-c.png"
+                  alt="Vitamina C"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Vitamina C 1g Efervescente</h3>
+                <p class="produto-descricao">
+                  Reforça o sistema imunológico. Tubo com 10 comprimidos.
+                </p>
+                <p class="produto-preco">R$ 18,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-vitamina-d.png"
+                  alt="Vitamina D3"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Vitamina D3 2.000UI</h3>
+                <p class="produto-descricao">
+                  Essencial para a saúde óssea e imunidade. Contém 30 cápsulas.
+                </p>
+                <p class="produto-preco">R$ 29,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-omega-3.png"
+                  alt="Ômega 3"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Ômega 3</h3>
+                <p class="produto-descricao">
+                  Saúde para o coração e cérebro. Pote com 60 cápsulas.
+                </p>
+                <p class="produto-preco">R$ 45,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-multivitaminico.png"
+                  alt="Multivitamínico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Multivitamínico A-Z Homem</h3>
+                <p class="produto-descricao">
+                  Energia e vitalidade para o dia a dia. Contém 30 comprimidos.
+                </p>
+                <p class="produto-preco">R$ 39,99</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-colageno.png"
+                  alt="Colágeno Hidrolisado"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Colágeno Hidrolisado Verisol</h3>
+                <p class="produto-descricao">
+                  Pele, cabelos e unhas mais fortes e saudáveis. Sabor neutro.
+                </p>
+                <p class="produto-preco">R$ 75,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-complexo-b.png"
+                  alt="Complexo B"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Complexo B</h3>
+                <p class="produto-descricao">
+                  Auxilia no metabolismo energético e na saúde do sistema
+                  nervoso.
+                </p>
+                <p class="produto-preco">R$ 24,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-calcio.png"
+                  alt="Cálcio + Vitamina D"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Cálcio 600mg + Vit D</h3>
+                <p class="produto-descricao">
+                  Fortalecimento de ossos e dentes. Contém 60 comprimidos.
+                </p>
+                <p class="produto-preco">R$ 33,80</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-melatonina.png"
+                  alt="Melatonina"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Melatonina em Gotas</h3>
+                <p class="produto-descricao">
+                  Auxilia na regulação do sono de forma natural. Sabor maracujá.
+                </p>
+                <p class="produto-preco">R$ 35,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="mamae-bebe" class="produtos-container">
+        <h2>Cuidados para Mamãe e Bebê</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-fralda-p.png"
+                  alt="Fralda Descartável P"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Fralda Descartável Tam. P</h3>
+                <p class="produto-descricao">
+                  Toque macio e máxima absorção. Pacote com 38 unidades.
+                </p>
+                <p class="produto-preco">R$ 32,75</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-pomada-assadura.png"
+                  alt="Pomada para Assaduras"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Pomada para Assaduras</h3>
+                <p class="produto-descricao">
+                  Proteção e tratamento para a pele delicada do bebê. 45g.
+                </p>
+                <p class="produto-preco">R$ 25,40</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-lenços-umedecidos.png"
+                  alt="Lenços Umedecidos"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Lenços Umedecidos</h3>
+                <p class="produto-descricao">
+                  Sem álcool e com extratos naturais. Pacote com 48 unidades.
+                </p>
+                <p class="produto-preco">R$ 11,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-shampoo-infantil.png"
+                  alt="Shampoo Infantil"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Shampoo Infantil Suave</h3>
+                <p class="produto-descricao">
+                  Não arde os olhos. Fórmula hipoalergênica. 200ml.
+                </p>
+                <p class="produto-preco">R$ 18,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-oleo-bebe.png"
+                  alt="Óleo para Bebê"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Óleo Corporal para Bebê</h3>
+                <p class="produto-descricao">
+                  Hidrata e protege a pele delicada, ideal para massagens.
+                </p>
+                <p class="produto-preco">R$ 21,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-fralda-g.png"
+                  alt="Fralda Descartável G"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Fralda Descartável Tam. G</h3>
+                <p class="produto-descricao">
+                  Conforto e ajuste perfeito para bebês maiores. Pacote com 28
+                  unidades.
+                </p>
+                <p class="produto-preco">R$ 35,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-sabonete-infantil.png"
+                  alt="Sabonete Infantil"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sabonete Líquido Glicerina</h3>
+                <p class="produto-descricao">
+                  Da cabeça aos pés, limpeza suave para o bebê. 200ml.
+                </p>
+                <p class="produto-preco">R$ 19,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-creme-estrias.png"
+                  alt="Creme para Estrias"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Creme Prevenção de Estrias</h3>
+                <p class="produto-descricao">
+                  Auxilia na elasticidade da pele durante a gestação.
+                </p>
+                <p class="produto-preco">R$ 79,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="higiene-pessoal" class="produtos-container">
+        <h2>Higiene Pessoal</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-shampoo-hidratante.png"
+                  alt="Shampoo Hidratante"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Shampoo Hidratante</h3>
+                <p class="produto-descricao">
+                  Para cabelos secos e danificados. 400ml.
+                </p>
+                <p class="produto-preco">R$ 21,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-desodorante-aerosol.png"
+                  alt="Desodorante Aerosol"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Desodorante Aerosol 48h</h3>
+                <p class="produto-descricao">
+                  Proteção seca e intensiva contra o suor e odores.
+                </p>
+                <p class="produto-preco">R$ 16,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-sabonete-liquido.png"
+                  alt="Sabonete Líquido"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sabonete Líquido Antibac</h3>
+                <p class="produto-descricao">
+                  Elimina 99% das bactérias. Proteção para toda a família.
+                </p>
+                <p class="produto-preco">R$ 14,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-creme-dental-total.png"
+                  alt="Creme Dental"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Creme Dental Proteção Total 12</h3>
+                <p class="produto-descricao">
+                  12 horas de proteção ativa para uma boca mais saudável.
+                </p>
+                <p class="produto-preco">R$ 9,80</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-fio-dental.png"
+                  alt="Fio Dental"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Fio Dental</h3>
+                <p class="produto-descricao">
+                  Remove a placa bacteriana onde a escova não alcança.
+                </p>
+                <p class="produto-preco">R$ 10,20</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-enxaguante-bucal.png"
+                  alt="Enxaguante Bucal"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Enxaguante Bucal sem Álcool</h3>
+                <p class="produto-descricao">
+                  Hálito fresco e proteção extra contra germes. 500ml.
+                </p>
+                <p class="produto-preco">R$ 24,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-sabonete-barra.png"
+                  alt="Sabonete em Barra"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sabonete em Barra Hidratante</h3>
+                <p class="produto-descricao">
+                  Com 1/4 de creme hidratante, não resseca a pele.
+                </p>
+                <p class="produto-preco">R$ 4,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-cotonetes.png"
+                  alt="Cotonetes"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Hastes Flexíveis com Algodão</h3>
+                <p class="produto-descricao">
+                  Segurança e conforto para a higiene diária. Caixa com 150 un.
+                </p>
+                <p class="produto-preco">R$ 8,99</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="saude-feminina" class="produtos-container">
+        <h2>Saúde Feminina</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-absorvente-noturno.png"
+                  alt="Absorvente Noturno"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Absorvente Noturno com Abas</h3>
+                <p class="produto-descricao">
+                  Proteção segura e confortável para uma noite de sono
+                  tranquila.
+                </p>
+                <p class="produto-preco">R$ 15,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-buscofem.png"
+                  alt="Analgésico para Cólicas"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Analgésico para Cólicas</h3>
+                <p class="produto-descricao">
+                  Alívio rápido e prolongado para as dores e cólicas menstruais.
+                </p>
+                <p class="produto-preco">R$ 17,80</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-sabonete-intimo.png"
+                  alt="Sabonete Íntimo"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Sabonete Líquido Íntimo</h3>
+                <p class="produto-descricao">
+                  Cuidado suave que equilibra o pH e protege a região íntima.
+                </p>
+                <p class="produto-preco">R$ 26,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-absorvente-diario.png"
+                  alt="Absorvente Diário"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Protetor Diário sem Perfume</h3>
+                <p class="produto-descricao">
+                  Discreto e respirável para uma sensação de frescor o dia todo.
+                </p>
+                <p class="produto-preco">R$ 13,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-teste-gravidez.png"
+                  alt="Teste de Gravidez"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Teste de Gravidez Rápido</h3>
+                <p class="produto-descricao">
+                  Mais de 99% de precisão. Resultado em poucos minutos.
+                </p>
+                <p class="produto-preco">R$ 19,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-lenços-intimos.png"
+                  alt="Lenços Umedecidos Íntimos"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Lenços Umedecidos Íntimos</h3>
+                <p class="produto-descricao">
+                  Higiene e frescor a qualquer hora e lugar. Hipoalergênico.
+                </p>
+                <p class="produto-preco">R$ 14,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-suplemento-ferro.png"
+                  alt="Suplemento de Ferro"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Suplemento de Ferro</h3>
+                <p class="produto-descricao">
+                  Auxilia na reposição e combate à anemia. Com ácido fólico.
+                </p>
+                <p class="produto-preco">R$ 31,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-coletor.png"
+                  alt="Coletor Menstrual"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Coletor Menstrual</h3>
+                <p class="produto-descricao">
+                  Alternativa sustentável e confortável aos absorventes.
+                </p>
+                <p class="produto-preco">R$ 85,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <section id="primeiros-socorros" class="produtos-container">
+        <h2>Primeiros Socorros</h2>
+        <button class="carrossel-btn prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="produtos-carrossel">
+          <div class="produtos-grid">
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-curativo.png"
+                  alt="Curativos Adesivos"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Caixa de Curativos</h3>
+                <p class="produto-descricao">
+                  Diversos tamanhos, flexíveis e resistentes à água. 40
+                  unidades.
+                </p>
+                <p class="produto-preco">R$ 12,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-antisseptico.png"
+                  alt="Antisséptico Spray"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Antisséptico Spray</h3>
+                <p class="produto-descricao">
+                  Limpa e protege ferimentos sem arder. Prático e seguro.
+                </p>
+                <p class="produto-preco">R$ 22,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-gaze.png"
+                  alt="Gaze Esterilizada"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Gaze Esterilizada</h3>
+                <p class="produto-descricao">
+                  Compressas de gaze para limpeza de ferimentos. Pacote c/ 10.
+                </p>
+                <p class="produto-preco">R$ 5,50</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-esparadrapo.png"
+                  alt="Esparadrapo Impermeável"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Esparadrapo Impermeável</h3>
+                <p class="produto-descricao">
+                  Fixação segura de curativos, mesmo em contato com a água.
+                </p>
+                <p class="produto-preco">R$ 9,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-termometro.png"
+                  alt="Termômetro Digital"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Termômetro Digital</h3>
+                <p class="produto-descricao">
+                  Medição rápida e precisa da temperatura corporal. Com alarme
+                  de febre.
+                </p>
+                <p class="produto-preco">R$ 28,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-bolsa-termica.png"
+                  alt="Bolsa Térmica"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Bolsa Térmica Gel</h3>
+                <p class="produto-descricao">
+                  Para compressas quentes ou frias, aliviando dores e inchaços.
+                </p>
+                <p class="produto-preco">R$ 35,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-alcool-70.png"
+                  alt="Álcool 70%"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Álcool 70% Spray</h3>
+                <p class="produto-descricao">
+                  Antisséptico para as mãos e superfícies. Prático e seguro.
+                </p>
+                <p class="produto-preco">R$ 14,90</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+
+            <article class="produto-card">
+              <div class="produto-img-container">
+                <img
+                  src="assets/img/produto-soro.png"
+                  alt="Soro Fisiológico"
+                  class="produto-img"
+                />
+              </div>
+              <div class="produto-info">
+                <h3>Soro Fisiológico 0,9%</h3>
+                <p class="produto-descricao">
+                  Para limpeza de ferimentos, olhos e narinas. 500ml.
+                </p>
+                <p class="produto-preco">R$ 8,00</p>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carrossel-btn next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+      
       <section
         id="equipe"
         class="section equipe"
@@ -712,7 +2001,15 @@
         </p>
       </div>
     </footer>
-
+    <a
+      href="https://wa.me/5522999404155"
+      class="whatsapp-float-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
     <script src="script.js" defer></script>
   </body>
 </html>
