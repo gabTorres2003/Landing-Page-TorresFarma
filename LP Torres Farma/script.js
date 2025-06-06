@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const todosCarrosselContainers = document.querySelectorAll(".produtos-container");
+  const todosCarrosselContainers = document.querySelectorAll(
+    ".produtos-container"
+  );
 
   todosCarrosselContainers.forEach((carrosselContainer) => {
     const carrossel = carrosselContainer.querySelector(".produtos-carrossel");
@@ -20,16 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (numOriginalCards === 0) return;
 
-      const visibleCards = Math.floor(carrossel.clientWidth / (originalCards[0].offsetWidth + 24));
+      const visibleCards = Math.floor(
+        carrossel.clientWidth / (originalCards[0].offsetWidth + 24)
+      );
       if (numOriginalCards > visibleCards) {
-          originalCards.slice().reverse().forEach((card) => {
-              const clone = card.cloneNode(true);
-              produtosGrid.insertBefore(clone, produtosGrid.firstChild);
+        originalCards
+          .slice()
+          .reverse()
+          .forEach((card) => {
+            const clone = card.cloneNode(true);
+            produtosGrid.insertBefore(clone, produtosGrid.firstChild);
           });
-          originalCards.forEach((card) => {
-              const clone = card.cloneNode(true);
-              produtosGrid.appendChild(clone);
-          });
+        originalCards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          produtosGrid.appendChild(clone);
+        });
       }
 
       let cardWidth = originalCards[0].offsetWidth;
@@ -55,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
           carrossel.style.scrollBehavior = "smooth";
         });
       }
-      
+
       if (numOriginalCards > visibleCards) {
-          setInitialPosition();
+        setInitialPosition();
       }
 
       function moveTo(newIndexDirection) {
@@ -106,10 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       updateButtonVisibility();
       window.addEventListener("resize", () => {
-          if (numOriginalCards > visibleCards) {
-              setInitialPosition();
-          }
-          updateButtonVisibility();
+        if (numOriginalCards > visibleCards) {
+          setInitialPosition();
+        }
+        updateButtonVisibility();
       });
     } else {
       if (btnPrev) btnPrev.style.display = "none";
@@ -163,12 +170,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p class="carrinho-item-nome">${item.nome}</p>
                 <p class="carrinho-item-preco">R$ ${item.preco.toFixed(2)}</p>
                 <div class="carrinho-item-controls">
-                    <button class="carrinho-item-diminuir" data-index="${index}" aria-label="Diminuir quantidade de ${item.nome}">-</button>
-                    <span class="carrinho-item-quantidade">Qtd: ${item.quantidade}</span>
-                    <button class="carrinho-item-aumentar" data-index="${index}" aria-label="Aumentar quantidade de ${item.nome}">+</button>
+                    <button class="carrinho-item-diminuir" data-index="${index}" aria-label="Diminuir quantidade de ${
+          item.nome
+        }">-</button>
+                    <span class="carrinho-item-quantidade">Qtd: ${
+                      item.quantidade
+                    }</span>
+                    <button class="carrinho-item-aumentar" data-index="${index}" aria-label="Aumentar quantidade de ${
+          item.nome
+        }">+</button>
                 </div>
             </div>
-            <button class="carrinho-item-remover-total" data-index="${index}" aria-label="Remover ${item.nome} do carrinho">
+            <button class="carrinho-item-remover-total" data-index="${index}" aria-label="Remover ${
+          item.nome
+        } do carrinho">
                 <i class="fas fa-trash-alt"></i>
             </button>`;
         carrinhoItemsContainer.appendChild(itemElement);
@@ -280,37 +295,39 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  
+
   if (btnFinalizarCompra) {
     btnFinalizarCompra.addEventListener("click", function () {
       if (carrinho.length === 0) {
         alert("Seu carrinho está vazio!");
         return;
       }
-      
+
       let subTotalPedido = 0;
       const itensParaMensagem = carrinho
-      .map((item) => {
-        const totalItem = item.preco * item.quantidade;
-        subTotalPedido += totalItem;
-        return `${item.quantidade}x ${item.nome} (R$ ${item.preco.toFixed(
+        .map((item) => {
+          const totalItem = item.preco * item.quantidade;
+          subTotalPedido += totalItem;
+          return `${item.quantidade}x ${item.nome} (R$ ${item.preco.toFixed(
             2
           )} cada) - Total Item: R$ ${totalItem.toFixed(2)}`;
         })
         .join("\n");
-        
+
       const mensagemWhatsapp =
-      "Olá, Drogaria Torres Farma! Gostaria de fazer o seguinte pedido:\n" +
+        "Olá, Drogaria Torres Farma! Gostaria de fazer o seguinte pedido:\n" +
         itensParaMensagem +
         `\n\nTOTAL DO PEDIDO: R$ ${subTotalPedido.toFixed(2)}`;
-        
-        const numeroFarmacia = "5522999404155";
 
-        if (numeroFarmacia.length < 10 || isNaN(parseInt(numeroFarmacia))) {
-        alert("Número de WhatsApp da farmácia não configurado corretamente no script.js!");
+      const numeroFarmacia = "5522999404155";
+
+      if (numeroFarmacia.length < 10 || isNaN(parseInt(numeroFarmacia))) {
+        alert(
+          "Número de WhatsApp da farmácia não configurado corretamente no script.js!"
+        );
         return;
       }
-      
+
       alert(
         "Você será redirecionado para o WhatsApp para finalizar seu pedido. Seu carrinho no site será esvaziado."
       );
@@ -348,6 +365,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const dropdownContent = document.querySelector(".dropdown-content");
+
+  if (dropdownBtn && dropdownContent) {
+    dropdownBtn.addEventListener("click", function (event) {
+      event.stopPropagation(); 
+      dropdownContent.classList.toggle("show");
+      dropdownBtn.classList.toggle("open"); 
+    });
+
+    window.addEventListener("click", function (event) {
+      if (dropdownContent.classList.contains("show")) {
+        if (!dropdownBtn.contains(event.target)) {
+          dropdownContent.classList.remove("show");
+          dropdownBtn.classList.remove("open");
+        }
+      }
+    });
+    
+    dropdownContent.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (dropdownContent.classList.contains("show")) {
+          dropdownContent.classList.remove("show");
+          dropdownBtn.classList.remove("open");
+        }
+      });
+    });
+  }
+
   atualizarInterfaceCarrinho();
 
   const menuToggle = document.querySelector(".menu-toggle");
@@ -367,48 +413,56 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  const formContato = document.getElementById('formContatoWhatsApp');
+  const formContato = document.getElementById("formContatoWhatsApp");
 
   if (formContato) {
-      formContato.addEventListener('submit', function(event) {
-          event.preventDefault(); 
+    formContato.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-          const nome = document.getElementById('nome').value.trim();
-          const email = document.getElementById('email').value.trim();
-          const telefone = document.getElementById('telefone').value.trim();
-          const assunto = document.getElementById('assunto').value.trim();
-          const mensagemUsuario = document.getElementById('mensagem').value.trim();
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const assunto = document.getElementById("assunto").value.trim();
+      const mensagemUsuario = document.getElementById("mensagem").value.trim();
 
-          if (!nome || !email || !assunto || !mensagemUsuario) {
-              alert('Por favor, preencha todos os campos obrigatórios (Nome, E-mail, Assunto, Mensagem).');
-              return;
-          }
+      if (!nome || !email || !assunto || !mensagemUsuario) {
+        alert(
+          "Por favor, preencha todos os campos obrigatórios (Nome, E-mail, Assunto, Mensagem)."
+        );
+        return;
+      }
 
-          let mensagemWhatsApp = `Nova Mensagem de Contato (do Site):\n\n`;
-          mensagemWhatsApp += `Nome: ${nome}\n`;
-          mensagemWhatsApp += `E-mail: ${email}\n`;
-          if (telefone) {
-              mensagemWhatsApp += `Telefone: ${telefone}\n`;
-          }
-          mensagemWhatsApp += `Assunto: ${assunto}\n\n`;
-          mensagemWhatsApp += `Mensagem:\n${mensagemUsuario}`;
-          
-          const numeroFarmaciaContato = "5522999404155"; 
+      let mensagemWhatsApp = `Nova Mensagem de Contato (do Site):\n\n`;
+      mensagemWhatsApp += `Nome: ${nome}\n`;
+      mensagemWhatsApp += `E-mail: ${email}\n`;
+      if (telefone) {
+        mensagemWhatsApp += `Telefone: ${telefone}\n`;
+      }
+      mensagemWhatsApp += `Assunto: ${assunto}\n\n`;
+      mensagemWhatsApp += `Mensagem:\n${mensagemUsuario}`;
 
-          if (numeroFarmaciaContato.length < 10 || isNaN(parseInt(numeroFarmaciaContato))) {
-               alert("O número de WhatsApp para contato não está configurado corretamente. Por favor, avise ao administrador do site.");
-               return;
-          }
-          
-          alert('Você será redirecionado para o WhatsApp para enviar sua mensagem. Após confirmar o envio no WhatsApp, se desejar, pode fechar esta aba.');
+      const numeroFarmaciaContato = "5522999404155";
 
-          const mensagemCodificada = encodeURIComponent(mensagemWhatsApp);
-          const urlWhatsApp = `https://wa.me/${numeroFarmaciaContato}?text=${mensagemCodificada}`;
+      if (
+        numeroFarmaciaContato.length < 10 ||
+        isNaN(parseInt(numeroFarmaciaContato))
+      ) {
+        alert(
+          "O número de WhatsApp para contato não está configurado corretamente. Por favor, avise ao administrador do site."
+        );
+        return;
+      }
 
-          window.open(urlWhatsApp, '_blank');
+      alert(
+        "Você será redirecionado para o WhatsApp para enviar sua mensagem. Após confirmar o envio no WhatsApp, se desejar, pode fechar esta aba."
+      );
 
-          
-          formContato.reset();
-      });
+      const mensagemCodificada = encodeURIComponent(mensagemWhatsApp);
+      const urlWhatsApp = `https://wa.me/${numeroFarmaciaContato}?text=${mensagemCodificada}`;
+
+      window.open(urlWhatsApp, "_blank");
+
+      formContato.reset();
+    });
   }
 });
