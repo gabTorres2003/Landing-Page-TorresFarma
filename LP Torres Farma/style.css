@@ -922,7 +922,6 @@ footer .social a:hover {
 .footer-developer-credit .developer-logo {
   height: 50px; /* Ajuste a altura do logo conforme necessário */
   width: auto; /* Mantém a proporção */
- 
 }
 .footer-copyright {
   /* ... seus estilos existentes ... */
@@ -938,25 +937,25 @@ footer .social a:hover {
   width: 60px;
   height: 60px;
   bottom: 25px; /* Distância da parte de baixo da tela */
-  right: 25px;  /* Distância da parte direita da tela */
-  background-color: #25D366; /* Cor oficial do WhatsApp */
-  color: #FFF;
+  right: 25px; /* Distância da parte direita da tela */
+  background-color: #25d366; /* Cor oficial do WhatsApp */
+  color: #fff;
   border-radius: 50%;
   text-align: center;
   font-size: 30px; /* Tamanho do ícone de whatsapp */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: 1000; 
+  z-index: 1000;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   text-decoration: none; /* Remove o sublinhado do link */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-float-btn:hover {
-  background-color: #128C7E; /* Cor mais escura para o efeito hover */
+  background-color: #128c7e; /* Cor mais escura para o efeito hover */
   transform: scale(1.1); /* Aumenta um pouco de tamanho ao passar o mouse */
 }
 
@@ -1066,12 +1065,16 @@ footer .social a:hover {
     height: 150px;
   }
 
+  .produtos-container h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 1.5rem;
+  }
+
   /* Footer em telas médias: blocos empilhados e centralizados */
   .footer-info,
-  .footer-links-social, /* Aplica se a div wrapper existir */
-  footer nav[aria-label="Navegação do rodapé"], /* Fallback */
+  .footer-links-social,
+  footer nav[aria-label="Navegação do rodapé"],
   footer .social {
-    /* Fallback */
     flex-basis: 100%;
     text-align: center;
   }
@@ -1133,13 +1136,18 @@ footer .social a:hover {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
+
+  .produtos-container h2 {
+    font-size: 1.3rem; 
+    margin-bottom: 1rem;
+  }
   .produtos-carrossel {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     gap: 1rem;
   }
   .produtos-grid {
-    padding-left: 1rem; 
+    padding-left: 1rem;
     padding-right: 1rem;
     gap: 0.8rem;
   }
@@ -1151,12 +1159,12 @@ footer .social a:hover {
   }
 
   .produto-img-container {
-    height: 160px; /* Altura da área da imagem bem menor */
+    height: 160px; 
     padding: 0.8rem;
   }
 
   .produto-info {
-    padding: 1rem; 
+    padding: 1rem;
   }
 
   .produto-info h3 {
@@ -1171,7 +1179,7 @@ footer .social a:hover {
     font-size: 0.6rem;
     margin-bottom: 0.8rem;
     line-height: 1.4;
-    height: 2.8em;  
+    height: 2.8em;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
